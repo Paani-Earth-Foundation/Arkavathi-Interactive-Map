@@ -20,12 +20,12 @@ body {
     position: absolute;
     z-index: 1;
     top: 20px;
-    left: 5px;
+    right: 5px;
     border-radius: 5px;
     width: 120px;
     border: 0px solid #000;
     font-family: 'Josefin Sans', sans-serif;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);*/
 }
 #coordinates {
     position: absolute;
@@ -194,7 +194,7 @@ body {
     background: #fff;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);*/
     z-index: 1;
     display: flex;
     gap: 10px;
@@ -247,7 +247,7 @@ body {
 #menu_layers_Baselayers {
     position: absolute;
     top: 60px;  /* Ensure it's placed below other elements */
-    right: 5px; /* Align it with the right side */
+    left: 5px; /* Align it with the left side */
     background: #fff;
     border-radius: 5px;
     padding: 10px;
@@ -297,22 +297,28 @@ body {
 
 <div id="menu_layers_Baselayers">
     <h3 style="font-family: ''Josefin Sans''; font-size: 18px; color: darkred; margin-bottom: 5px;">Base Layers</h3>
-    <div class="layer-option">
+
+    
+
+    <div class="layer-option" style="font-family: 'Josefin Sans', sans-serif;">
         <input id="toggle_industrial" type="checkbox" unchecked>
-        <label for="toggle_industrial">Industrial Areas</label>
+        <label for="toggle_industrial" style="color:#542788; font-weight: bold;">Industrial Areas</label>
     </div>
-    <div class="layer-option">
+   
+
+    <div class="layer-option" style="font-family: 'Josefin Sans', sans-serif;">
         <input id="toggle_quarry" type="checkbox" unchecked>
-        <label for="toggle_quarry">Quarry Areas</label>
-    </div>
-    <div class="layer-option">
-        <input id="toggle_basinboundary" type="checkbox" checked>
-        <label for="toggle_basinboundary">Basin Boundary</label>
+        <label for="toggle_quarry" style="color:#b35806; font-weight: bold;">Quarry Areas</label>
     </div>
 
-    <div class="layer-option">
+    <div class="layer-option" style="font-family: 'Josefin Sans', sans-serif;">
+        <input id="toggle_basinboundary" type="checkbox" checked>
+        <label for="toggle_basinboundary" style="color:#999999; font-weight: bold;">Basin Boundary</label>
+    </div>
+
+    <div class="layer-option" style="font-family: 'Josefin Sans', sans-serif;">
         <input id="toggle_drainage" type="checkbox" unchecked>
-        <label for="toggle_drainage"> Drainage </label>
+        <label for="toggle_drainage"style="color:#3182bd;font-weight: bold;"> Drainage </label>
     </div>
 </div>
 
@@ -511,6 +517,7 @@ function addCustomLayers() {
             visibility: 'visible'
         }
     });
+
 
 
 map.addSource('Arkavathi_Drainage', {
