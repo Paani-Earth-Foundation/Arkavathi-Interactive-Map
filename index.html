@@ -145,7 +145,7 @@ body {
 /* For smaller screens (tablets, smartphones) */
 @media only screen and (max-width: 768px) {
     .toggle {
-        width: 40%; /* Adjust the width for smaller screens */
+        width: 80%; /* Adjust the width for smaller screens */
         right: 10px;
         left: 10px; /* Center the toggle on mobile */
         top: 150px; /* Adjust top to avoid overlap with other content */
@@ -156,7 +156,7 @@ body {
 /* For very small screens (like mobile phones) */
 @media only screen and (max-width: 480px) {
     .toggle {
-        width: 40%; /* Further adjust width for small screens */
+        width: 80%; /* Further adjust width for small screens */
         top: 180px; /* Push the toggle menu further down */
         right: 5px;
         left: 5px; /* Center the toggle */
@@ -279,6 +279,23 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Corrected the box-shadow */
 }
 
+@media only screen and (max-width: 768px) {
+    /* Base Layers Menu */
+    #menu_layers_Baselayers {
+        width: 40%; /* Takes up more space on smaller screens */
+        left: 10px; /* Keep it aligned to the left */
+        top: 40px; /* Adjust the top margin */
+    }
+}
+/* Responsive behavior for small mobile screens (phones) */
+@media only screen and (max-width: 480px) {
+    /* Base Layers Menu */
+    #menu_layers_Baselayers {
+        width: 40%; /* Even more responsive for small screens */
+        left: 5px;
+        top: 30px; /* Adjust the top margin */
+    }
+}
 
 </style>
 </head>
