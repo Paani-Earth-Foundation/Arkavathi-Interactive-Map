@@ -131,37 +131,39 @@ body {
 }
 
 
+/* Styling for the toggle menu */
 .toggle {
     position: absolute;
     top: 100px;
     right: 20px;  /* Keep this to the right */
     background-color: rgba(100, 100, 100, 0.6);
     padding: 10px;
-    z-index: 2;
+    z-index: 3; /* Ensure the toggle menu stays on top of the base layers */
     border-radius: 5px;
 }
 
 /* Styling for smaller screens (tablets, smartphones) */
-/* For smaller screens (tablets, smartphones) */
 @media only screen and (max-width: 768px) {
     .toggle {
         width: 60%; /* Adjust the width for smaller screens */
         right: 5px; /* Keep the toggle on the right */
-        left: auto; /* Remove any left alignment to ensure it's on the right */
-        top: 180px; /* Adjust top to avoid overlap with other content */
-        /* position: fixed; Fix the toggle position for better usability */
+        left: auto; /* Ensure it's aligned to the right */
+        top: 220px; /* Adjust the top margin to avoid overlap with Base Layers */
+        z-index: 3; /* Ensure it stays on top */
     }
 }
 
+/* Styling for small mobile screens */
 @media only screen and (max-width: 480px) {
     .toggle {
         width: 60%; /* Adjust the width for small screens */
-        top: 180px; /* Push the toggle menu further down */
+        top: 230px; /* Push the toggle menu further down to avoid overlap */
         right: 5px; /* Keep the toggle on the right */
-        left: auto; /* Remove any left alignment to ensure it's on the right */
-       
+        left: auto; /* Ensure it's aligned to the right */
+        z-index: 3; /* Ensure it stays on top */
     }
 }
+
 
 .toggle label {
     display: flex;
@@ -266,34 +268,37 @@ body {
 }
 
 /*The css styling code for the second menu_layers*/
+/* Base Layers Menu styling for large screens */
 #menu_layers_Baselayers {
     position: absolute;
     top: 100px; /* Adjusted for mobile view */
     left: 10px; /* Left aligned */
     width: 100%; /* Make it responsive */
-    max-width: 220px; /* Removing width restriction */
+    max-width: 220px; /* Limit the width */
     background: #fff;
     border-radius: 5px;
     padding: 10px;
-    z-index: 2;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Corrected the box-shadow */
+    z-index: 2; /* Keep a lower z-index to allow toggle menu to stay on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Box shadow */
 }
 
+/* Adjustments for medium screens (tablets, small laptops) */
 @media only screen and (max-width: 768px) {
-    /* Base Layers Menu */
     #menu_layers_Baselayers {
         width: 40%; /* Takes up more space on smaller screens */
         left: 10px; /* Keep it aligned to the left */
         top: 40px; /* Adjust the top margin */
+        z-index: 1; /* Ensure this stays below the toggle menu */
     }
 }
+
 /* Responsive behavior for small mobile screens (phones) */
 @media only screen and (max-width: 480px) {
-    /* Base Layers Menu */
     #menu_layers_Baselayers {
         width: 40%; /* Even more responsive for small screens */
         left: 5px;
         top: 30px; /* Adjust the top margin */
+        z-index: 1; /* Ensure this stays below the toggle menu */
     }
 }
 
