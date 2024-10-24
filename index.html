@@ -153,13 +153,12 @@ body {
     }
 }
 
-/* For very small screens (like mobile phones) */
 @media only screen and (max-width: 480px) {
     .toggle {
-        width: 80%; /* Further adjust width for small screens */
+        width: 80%; /* Adjust the width for small screens */
         top: 180px; /* Push the toggle menu further down */
-        right: 5px;
-        left: 5px; /* Center the toggle */
+        right: 5px; /* Keep the toggle on the right */
+        left: auto; /* Remove any left alignment to ensure it's on the right */
     }
 }
 
