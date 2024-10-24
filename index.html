@@ -141,16 +141,25 @@ body {
     border-radius: 5px;
 }
 
-/* Add responsiveness for mobile */
-@media only screen and (max-width: 600px) {
+/* Styling for smaller screens (tablets, smartphones) */
+@media only screen and (max-width: 768px) {
     .toggle {
-        top: 50px;  /* Adjust top positioning for mobile */
-        right: 10px; /* Reduce right margin for smaller screens */
-        width: 40%; /* Reduce the width for mobile, smaller than before */
-        max-width: 300px; /* Limit maximum width */
-        left: 10%;  /* Center the toggle on mobile */
-        position: fixed; /* Fix the menu on mobile for better usability */
-        background-color: rgba(100, 100, 100, 0.8); /* Slightly darken for better contrast on mobile */
+        width: 60%; /* Adjust width based on screen size */
+        right: 10px;
+        left: 10px; /* Center the toggle on small screens */
+        top: 50px; /* Adjust the top position */
+        padding: 8px;
+    }
+}
+
+/* Styling for very small screens (mobile phones) */
+@media only screen and (max-width: 480px) {
+    .toggle {
+        width: 80%; /* Take up more screen space for small devices */
+        right: 10px;
+        left: 10px; /* Center the toggle */
+        top: 30px; /* Bring the menu closer to the top */
+        padding: 6px;
     }
 }
 
