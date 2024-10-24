@@ -135,32 +135,31 @@ body {
 .toggle {
     position: absolute;
     top: 100px;
-    right: 20px;  /* Keep this to the right */
-    background-color: rgba(100, 100, 100, 0.6);
-    padding: 10px;
-    z-index: 3; /* Ensure the toggle menu stays on top of the base layers */
-    border-radius: 5px;
+    right: 10px;  /* Keep this to the right */
+    background-color: rgba(100, 100, 100, 0.6); /* Background color */
+    padding: 15px;  /* Adjust the padding to change inner spacing */
+    z-index: 3; /* Ensure the toggle menu stays on top of other content */
+    border-radius: 8px; /* Rounded corners */
+    width: 50%;  /* Set the width to 50% of the screen size */
+    height: auto; /* Adjust height; auto will fit content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for better appearance */
 }
 
-/* Styling for smaller screens (tablets, smartphones) */
+/* For medium-sized screens */
 @media only screen and (max-width: 768px) {
     .toggle {
-        width: 60%; /* Adjust the width for smaller screens */
-        right: 5px; /* Keep the toggle on the right */
-        left: auto; /* Ensure it's aligned to the right */
-        top: 220px; /* Adjust the top margin to avoid overlap with Base Layers */
-        z-index: 3; /* Ensure it stays on top */
+        width: 60%; /* Reduce the width to 60% for medium screens */
+        padding: 10px; /* Adjust padding to fit screen */
+        top: 180px; /* Adjust top to prevent overlap */
     }
 }
 
-/* Styling for small mobile screens */
+/* For small mobile screens */
 @media only screen and (max-width: 480px) {
     .toggle {
-        width: 60%; /* Adjust the width for small screens */
-        top: 230px; /* Push the toggle menu further down to avoid overlap */
-        right: 5px; /* Keep the toggle on the right */
-        left: auto; /* Ensure it's aligned to the right */
-        z-index: 3; /* Ensure it stays on top */
+        width: 80%; /* Use 80% width for small mobile screens */
+        padding: 8px; /* Adjust padding for smaller devices */
+        top: 200px; /* Push it down further for smaller screens */
     }
 }
 
@@ -268,39 +267,41 @@ body {
 }
 
 /*The css styling code for the second menu_layers*/
+
 /* Base Layers Menu styling for large screens */
 #menu_layers_Baselayers {
     position: absolute;
-    top: 100px; /* Adjusted for mobile view */
-    left: 10px; /* Left aligned */
-    width: 100%; /* Make it responsive */
-    max-width: 220px; /* Limit the width */
+    top: 100px; /* Adjusted for better placement */
+    left: 10px; /* Align it to the left */
+    width: 50%; /* Set the width to 50% for larger screens */
+    max-width: none; /* Remove the max-width restriction */
     background: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    z-index: 2; /* Keep a lower z-index to allow toggle menu to stay on top */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Box shadow */
+    border-radius: 8px;
+    padding: 15px;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Adjustments for medium screens (tablets, small laptops) */
+/* For medium-sized screens (tablets) */
 @media only screen and (max-width: 768px) {
     #menu_layers_Baselayers {
-        width: 40%; /* Takes up more space on smaller screens */
-        left: 10px; /* Keep it aligned to the left */
-        top: 40px; /* Adjust the top margin */
-        z-index: 1; /* Ensure this stays below the toggle menu */
+        width: 60%; /* Adjust the width to 60% for medium screens */
+        left: 5px; /* Keep it aligned to the left */
+        top: 80px; /* Adjust the top position */
+        padding: 10px; /* Adjust padding */
     }
 }
 
-/* Responsive behavior for small mobile screens (phones) */
+/* For small mobile screens */
 @media only screen and (max-width: 480px) {
     #menu_layers_Baselayers {
-        width: 40%; /* Even more responsive for small screens */
-        left: 5px;
-        top: 30px; /* Adjust the top margin */
-        z-index: 1; /* Ensure this stays below the toggle menu */
+        width: 80%; /* Set the width to 80% for small mobile screens */
+        left: 5px; /* Keep aligned to the left */
+        top: 60px; /* Adjust the top for small screens */
+        padding: 8px; /* Reduce padding for small screens */
     }
 }
+
 
 </style>
 </head>
